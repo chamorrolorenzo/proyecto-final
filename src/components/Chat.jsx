@@ -2,16 +2,16 @@ export default function Chat() {
   return (
     <div className="chat">
       <header className="chat-header">
-        <div className="chat-user">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
-            alt="Aiden Chavez"
-            className="chat-avatar"
-          />
-          <div>
+        <div>
+          <div className="chat-user">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4YreOWfDX3kK-QLAbAL4ufCPc84ol2MA8Xg&s"
+              alt="Aiden Chavez"
+              className="chat-avatar"
+            />
             <strong>Aiden Chavez</strong>
-            <span className="last-seen"> Last seen: 2 hours ago</span>
           </div>
+          <span className="last-seen"> Last seen: 2 hours ago</span>
         </div>
 
         <div className="chat-actions">
@@ -25,15 +25,13 @@ export default function Chat() {
 
 
       <section className="chat-messages">
-        {[].map((m, i) => (
-          <div key={i} className={`message ${m.from}`}>
-            <p>{m.text}</p>
-            <span className="time">{m.time}</span>
-          </div>
-        ))}
+        <div className="message">
+          <p></p>
+          <span className="time"></span>
+        </div>
       </section>
 
-      <footer className="chat-input">
+      <footer className="chat-footer">
         <input type="text" placeholder="Enter text here..." />
         <button>➤</button>
       </footer>
